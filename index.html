@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Tracker</title>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/styles.css" rel="stylesheet">
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen p-5 bg-gradient-to-r from-gray-900 to-black text-white">
+    
+    <h1 class="text-4xl font-bold cyber-text mb-6">GitHub Tracker</h1>
+    
+    <!-- Input Box & Button -->
+    <div class="bg-gray-900 p-6 rounded-lg shadow-lg cyber-border w-full max-w-md">
+        <input type="text" id="username" placeholder="Enter GitHub Username" 
+            class="w-full p-3 mb-4 cyber-input rounded-lg focus:ring-2 focus:ring-blue-500">
+        <button onclick="fetchGitHubData()" 
+            class="w-full py-3 cyber-button rounded-lg shadow-lg transition duration-300 bg-blue-600 hover:bg-blue-800">
+            Track
+        </button>
+    </div>
+    
+    <!-- Stats Display -->
+    <div id="stats" class="mt-6 bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-3xl">
+        <h2 class="text-2xl font-semibold mb-4">GitHub Statistics</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div class="p-4 bg-gray-700 rounded-lg">
+                <p class="text-lg font-bold">Total Repositories</p>
+                <p id="totalRepos" class="text-xl">0</p>
+            </div>
+            <div class="p-4 bg-gray-700 rounded-lg">
+                <p class="text-lg font-bold">Total Stars</p>
+                <p id="totalStars" class="text-xl">0</p>
+            </div>
+            <div class="p-4 bg-gray-700 rounded-lg">
+                <p class="text-lg font-bold">Total PRs</p>
+                <p id="totalPRs" class="text-xl">0</p>
+            </div>
+            <div class="p-4 bg-gray-700 rounded-lg">
+                <p class="text-lg font-bold">Merged PRs</p>
+                <p id="mergedPRs" class="text-xl">0</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dropdown List for Repositories -->
+    <div class="mt-6 bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-3xl">
+        <h2 class="text-2xl font-semibold mb-4">Repositories</h2>
+        <select id="repoDropdown" class="w-full p-3 bg-gray-900 text-white rounded-lg">
+            <option value="">Select a repository</option>
+        </select>
+    </div>
+
+    <!-- Activity Chart -->
+    <div class="mt-6 bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-3xl">
+        <h2 class="text-2xl font-semibold mb-4">Activity Chart</h2>
+        <canvas id="activityChart"></canvas>
+    </div>
+
+</body>
+
+<!-- JavaScript -->
+<script src="script.js" defer></script>
+</html>

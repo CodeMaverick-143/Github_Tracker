@@ -1,0 +1,72 @@
+/* Global Styles */
+body {
+    background: linear-gradient(135deg, #0a0f1f, #1b1f3b);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Cyber Glow Effect */
+.cyber-text {
+    color: #00eaff;
+    text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff, 0 0 40px #0077b6;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Neon Glow Animation */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
+    }
+    to {
+        text-shadow: 0 0 15px #00eaff, 0 0 30px #0077b6;
+    }
+}
+
+/* Card Container */
+.cyber-border {
+    background: rgba(25, 25, 40, 0.8);
+    border: 2px solid rgba(0, 238, 255, 0.5);
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* Input Box */
+.cyber-input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 238, 255, 0.5);
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.cyber-input:focus {
+    border-color: #00eaff;
+    box-shadow: 0 0 10px rgba(0, 238, 255, 0.7);
+    outline: none;
+}
+
+/* Button */
+.cyber-button {
+    background: linear-gradient(90deg, #00eaff, #0077b6);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.cyber-button:hover {
+    background: linear-gradient(90deg, #0077b6, #00eaff);
+    box-shadow: 0 0 15px rgba(0, 238, 255, 0.7);
+}
+
+/* Chart Container */
+#activityChart {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+}
