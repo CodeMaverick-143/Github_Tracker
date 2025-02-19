@@ -1,4 +1,4 @@
-const GITHUB_TOKEN = "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"; // Replace with your actual GitHub token
+const GITHUB_TOKEN = "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"; // Replace with your actual GitHub token
 
 async function fetchGitHubData() {
     const username = document.getElementById('username').value.trim();
